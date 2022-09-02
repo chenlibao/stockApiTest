@@ -1,0 +1,1 @@
+INFO     C:\Users\chenlibao\PycharmProjects\stockApiTest\business\requestApi.py:requestApi.py:26 上传请求参数：{'user_id': 'A904', 'stock': 'SH600887,SZ000001'}
