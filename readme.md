@@ -1,29 +1,56 @@
-# pytest½Ó¿Ú×Ô¶¯»¯²âÊÔ
-ÖªÊ¶µã£º
-ÒµÎñ·Ö²ã¡¢ÅäÖÃ½âÎö¡¢conftest¡¢fixture¡¢Êý¾ÝÇý¶¯¡¢Êý¾Ý¿â¡¢ÈÕÖ¾¡¢allure±¨¸æ
+# pytestæŽ¥å£è‡ªåŠ¨åŒ–æµ‹è¯•
 
-±¾µØÖ±½ÓÔËÐÐ£º
+è¿™æ˜¯ä¸€ä¸ªç®€å•çš„pytestæŽ¥å£è‡ªåŠ¨åŒ–æ¡†æž¶ï¼Œå¦‚æžœä½ éœ€è¦åšæŽ¥å£è‡ªåŠ¨åŒ–æµ‹è¯•ï¼Œå¯ä»¥è¿ç”¨è¿™ä¸ªdemoè‡ªè¡Œè¿›è¡Œæ‰©å……å†…å®¹
+
+
+**çŸ¥è¯†ç‚¹ï¼š**
+
+ä¸šåŠ¡åˆ†å±‚ã€é…ç½®è§£æžã€conftestã€fixtureã€æ•°æ®é©±åŠ¨ã€æ•°æ®åº“ã€æ—¥å¿—ã€allureæŠ¥å‘Š
+
+**æœ¬åœ°ç›´æŽ¥è¿è¡Œï¼š**
+
 `python run.py`
 
-¾ßÌå£º
-1¡¢·Ö²ã£¬½«½Ó¿Úµ¥¶À·â×°£¬ÕâÑùµ¥¸öÓÃÀý¿ÉÒÔ¶à´Îµ÷ÓÃ½Ó¿Ú
-2¡¢ÅäÖÃ£¬config.ini×÷ÎªÅäÖÃÎÄ¼þ£¬configUtil.py×÷Îª½âÎö¹¤¾ß
-3¡¢ÈÕÖ¾£¬½«ÈÕÖ¾Ä£¿éµ¥¶À·â×°
-4¡¢conftest.py£¬ÔÚ²âÊÔÓÃÀýÄ¿Â¼ÏÂ£¬Ìí¼Ó¸ÃÎÄ¼þ£¬ÔËÐÐÓÃÀýÇ°£¬»áÏÈ¼ÓÔØ¸ÃÎÄ¼þ,×÷ÓÃ£º
-£¨1£©±àÐ´fixture£¬ÊµÏÖÀàËÆtearUpÓëtearDown£¬ÔÚÓÃÀýÖÐÍ¨¹ý@pytest.mark.usefixtures("func_name")À´µ÷ÓÃ
-£¨2£©µ¼ÈëÈÕÖ¾£¬ÓÉÓÚÔÚ²âÊÔÓÃÀýÖÐÌí¼ÓÈÕÖ¾£¬ÎÞ·¨²úÉúÈÕÖ¾¼ÇÂ¼Æ÷£¬¿ÉÒÔÔÚconftest.pyÏÈ¼ÓÔØ
-£¨3£©ÖÕ¶ËÈÕÖ¾ÏÔÊ¾²âÊÔ½á¹ûÇé¿ö£ºpytest_terminal_summary£¬ÈçÏÂ
+**å…·ä½“**ï¼š
+
+1ã€åˆ†å±‚ï¼Œå°†æŽ¥å£å•ç‹¬å°è£…ï¼Œè¿™æ ·å•ä¸ªç”¨ä¾‹å¯ä»¥å¤šæ¬¡è°ƒç”¨æŽ¥å£
+
+2ã€é…ç½®ï¼Œconfig.iniä½œä¸ºé…ç½®æ–‡ä»¶ï¼ŒconfigUtil.pyä½œä¸ºè§£æžå·¥å…·
+
+3ã€æ—¥å¿—ï¼Œå°†æ—¥å¿—æ¨¡å—å•ç‹¬å°è£…
+
+4ã€conftest.pyï¼Œåœ¨æµ‹è¯•ç”¨ä¾‹ç›®å½•ä¸‹ï¼Œæ·»åŠ è¯¥æ–‡ä»¶ï¼Œè¿è¡Œç”¨ä¾‹å‰ï¼Œä¼šå…ˆåŠ è½½è¯¥æ–‡ä»¶,ä½œç”¨ï¼š
+
+ï¼ˆ1ï¼‰ç¼–å†™fixtureï¼Œå®žçŽ°ç±»ä¼¼tearUpä¸ŽtearDownï¼Œåœ¨ç”¨ä¾‹ä¸­é€šè¿‡`@pytest.mark.usefixtures("func_name")`æ¥è°ƒç”¨
+
+ï¼ˆ2ï¼‰å¯¼å…¥æ—¥å¿—ï¼Œç”±äºŽåœ¨æµ‹è¯•ç”¨ä¾‹ä¸­æ·»åŠ æ—¥å¿—ï¼Œæ— æ³•äº§ç”Ÿæ—¥å¿—è®°å½•å™¨ï¼Œå¯ä»¥åœ¨conftest.pyå…ˆåŠ è½½
+
+ï¼ˆ3ï¼‰ç»ˆç«¯æ—¥å¿—æ˜¾ç¤ºæµ‹è¯•ç»“æžœæƒ…å†µï¼špytest_terminal_summaryï¼Œå¦‚ä¸‹
+
 {'passed': 0, 'failed': 2, 'error': 0, 'skipped': 0, 'xfailed': 0, 'xpassed': 0, 'rerun': 0, 'time': 0, 'total': 2, 'passrate': '0.0%'}
-5¡¢Êý¾Ý¿â£¬Éæ¼°µ½Çå¿â£¬²é¿â£¬¸Ä¿âÀ´ÊÊÅä²âÊÔµÄ¶¯×÷£¬·â×°sqlUtil.py
-6¡¢²âÊÔÊý¾Ý£¬ÕâÀïÃ»ÓÐ²ÉÓÃexcel»òÕßyaml»òÕßjsonµÈÎÄ¼þÀ´¹ÜÀí²âÊÔÊý¾Ý£¬Ö±½Ó²ÉÓÃpyÎÄ¼þ£¬ÓÅµã
-£¨1£©ÎÞÐè½âÎö£¬·½±ã
-£¨2£©²¿·Ö²âÊÔÊý¾Ý£¬¿ÉÒÔÖ±½ÓÍ¨¹ýÔÚpyÎÄ¼þÖÐÍ¨¹ý±àÐ´º¯ÊýÀ´¹¹Ôì
-7¡¢Ê¹ÓÃ@pytest.mark.parametrize£¬ÊµÏÖÊý¾ÝÇý¶¯²âÊÔ
-8¡¢²âÊÔ±¨¸æ
-£¨1£©allure²âÊÔ±¨¸æ
-£¨2£©ÇÐ»»µ½allureËùÔÚÄ¿Â¼£¬Ö´ÐÐÒÔÏÂÃüÁî²é¿´±¨¸æ
+
+5ã€æ•°æ®åº“ï¼Œæ¶‰åŠåˆ°æ¸…åº“ï¼ŒæŸ¥åº“ï¼Œæ”¹åº“æ¥é€‚é…æµ‹è¯•çš„åŠ¨ä½œï¼Œå°è£…sqlUtil.py
+
+6ã€æµ‹è¯•æ•°æ®ï¼Œè¿™é‡Œæ²¡æœ‰é‡‡ç”¨excelæˆ–è€…yamlæˆ–è€…jsonç­‰æ–‡ä»¶æ¥ç®¡ç†æµ‹è¯•æ•°æ®ï¼Œç›´æŽ¥é‡‡ç”¨pyæ–‡ä»¶ï¼Œä¼˜ç‚¹
+
+ï¼ˆ1ï¼‰æ— éœ€è§£æžï¼Œæ–¹ä¾¿
+
+ï¼ˆ2ï¼‰éƒ¨åˆ†æµ‹è¯•æ•°æ®ï¼Œå¯ä»¥ç›´æŽ¥é€šè¿‡åœ¨pyæ–‡ä»¶ä¸­é€šè¿‡ç¼–å†™å‡½æ•°æ¥æž„é€ 
+
+7ã€ä½¿ç”¨`@pytest.mark.parametrize`ï¼Œå®žçŽ°æ•°æ®é©±åŠ¨æµ‹è¯•
+
+8ã€æµ‹è¯•æŠ¥å‘Š
+
+ï¼ˆ1ï¼‰allureæµ‹è¯•æŠ¥å‘Š
+
+ï¼ˆ2ï¼‰æ‰§è¡Œä»¥ä¸‹å‘½ä»¤æŸ¥çœ‹æŠ¥å‘Šï¼ˆallureå¦‚æžœæ²¡æœ‰æ·»åŠ çŽ¯å¢ƒå˜é‡ï¼Œéœ€è¾“å…¥ç»å¯¹è·¯å¾„ï¼‰
+
 `allure -serve ./reports/allure`
-9¡¢JenkinsÁ÷Ë®Ïß
-£¨1£©ÔÚJenkinsÖÐ°²×°allure²å¼þ
-£¨2£©±àÐ´Jenkins JobÀ´ÔËÐÐ½Å±¾£¬Ö»ÐèÔÚJobÖÐ£¬Ôö¼Óshell½Å±¾¼´¿É£¬Ìí¼ÓÒÔÏÂÃüÁî
+
+9ã€Jenkinsæµæ°´çº¿
+
+ï¼ˆ1ï¼‰åœ¨Jenkinsä¸­å®‰è£…allureæ’ä»¶
+
+ï¼ˆ2ï¼‰ç¼–å†™Jenkins Jobæ¥è¿è¡Œè„šæœ¬ï¼Œåªéœ€åœ¨Jobä¸­ï¼Œå¢žåŠ shellè„šæœ¬å³å¯ï¼Œæ·»åŠ ä»¥ä¸‹å‘½ä»¤
+
 `python -m pytest ./testCases --alluredir=./reports/allure`
